@@ -1,7 +1,8 @@
 # SPID Metadata Signer in ambiente Windows
 
-Lo script **01-CreateSelfSignedCert-Test.cmd** permette di generare un certificato digitale autofirmato tramite [OpenSSL](https://www.openssl.org/)
-Lo script **02-MetadataSign-Test.cmd** permette di firmare un metadata SAML utilizzando [XmlSecTool V2](https://wiki.shibboleth.net/confluence/display/XSTJ2/xmlsectool+V2+Home)
+Gli scritps permettono la generazione di un certificato digitale autofirmato e la firma di un metadata SAML:
+* Lo script **01-CreateSelfSignedCert-Test.cmd** permette di generare un certificato digitale autofirmato tramite [OpenSSL](https://www.openssl.org/)
+* Lo script **02-MetadataSign-Test.cmd** permette di firmare un metadata SAML utilizzando [XmlSecTool V2](https://wiki.shibboleth.net/confluence/display/XSTJ2/xmlsectool+V2+Home)
 
 ## Requisiti per utilizzare lo script 01-CreateSelfSignedCert-Test.cmd
 * [OpenSSL](https://slproweb.com/products/Win32OpenSSL.html) la versione a 64 bit è disponibile nella directory *OpenSSL*
