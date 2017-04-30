@@ -44,3 +44,4 @@ SET OpenSSBinPath=%~dp0OpenSSL\OpenSSL-Win64-1_1_0e\bin
 SET CertsPath=%~dp0Certs
 ```
 
+## Note Note di utilizzo dello script 02-MetadataSign-Test.cmd.cmd
