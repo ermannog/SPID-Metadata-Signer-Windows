@@ -8,7 +8,7 @@ REM *** Configurazioni ***
 SET MetadataPath=%~dp0Metadata
 SET CertsPath=%~dp0Certs
 SET XmlSecToolPath=%~dp0XmlSecTool\xmlsectool-2.0.0
-SET CLASSPATH=%XmlSecToolPath%\Lib\*
+SET CLASSPATH=%XmlSecToolPath%\lib\*
 
 CLS
 @ECHO OFF
