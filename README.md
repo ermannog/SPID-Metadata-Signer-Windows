@@ -38,9 +38,9 @@ SET SHABits=256
 Le configurazioni relative al path di OpenSSL e della directory *Certs* sono riportate nella sezione *"Configurazioni"*.
 Nello script **01-CreateSelfSignedCert-Test.cmd** le configurazioni sono impostate per utilizzare OpenSSL v1.1.0e Light a 64 Bits presente nella directory *OpenSSL\OpenSSL-Win64-1_1_0e\bin* 
 
-'''
+```
 REM *** Configurazioni ***
 SET OpenSSBinPath=%~dp0OpenSSL\OpenSSL-Win64-1_1_0e\bin
 SET CertsPath=%~dp0Certs
-'''
+```
 
