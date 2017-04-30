@@ -20,9 +20,9 @@ Gli scritps permettono la generazione di un certificato digitale autofirmato e l
 * Nella cartella *Certs* è presente una chiave senza password (ComuneVigata-SPID-nopass.key) e un certificato di prova (ComuneVigata-SPID.crt) generati con lo script **01-CreateSelfSignedCert-Test.cmd**
 * Per l'utlizzo degli scrits crearne una copia e modificare la sezione *"Impostazioni"* e se necessario la sezione *"Configurazioni"* come descritto successivamente nelle sezioni **Note di utilizzo dello script 01-CreateSelfSignedCert-Test.cmd** e **Note di utilizzo dello script 02-MetadataSign-Test.cmd**
 
-## Note Note di utilizzo dello script 01-CreateSelfSignedCert-Test.cmd
-Lo script crea un certificato autofirmato mediante l'utilizzo di OpenSSL che deve essere presente nella directory *OpenSSl* le inpostazioni con cui verrà generato il certificato sono riportate nella sezione *"Impostazioni"*.
-Nello script **01-CreateSelfSignedCert-Test.cmd** le impostazioni sono impostate per la creazione di un certificato autofirmato per il comune di Vigata con chiave di cifratura di 4096 Bits, SHA di 256 Bits, validità di 1095 giorni (3 anni) e prefisso per i file generati pari a *ComuneVigate-SPID*.
+## Note di utilizzo dello script 01-CreateSelfSignedCert-Test.cmd
+Lo script crea un certificato autofirmato mediante l'utilizzo di OpenSSL che deve essere presente nella directory *OpenSSl* le impostazioni con cui verrà generato il certificato sono riportate nella sezione *"Impostazioni"*.
+Nello script **01-CreateSelfSignedCert-Test.cmd** le impostazioni sono impostate per la creazione di un certificato autofirmato per il *Comune di Vigata* con chiave di cifratura di 4096 Bits, SHA di 256 Bits, validità di 1095 giorni (3 anni) e prefisso per i file generati pari a *ComuneVigate-SPID*.
 Lo script **01-CreateSelfSignedCert-Test.cmd** genererà nella directory *Certs* un file chiave privata protetta dalla password *P@ssW0rd!* denominato *ComuneVigata-SPID.key*, un file per la chiave privata non protetto da password denominato *ComuneVigata-SPID-nopass.key* e un file per la chiave pubblica denominato *ComuneVigata-SPID.crt*
 
 ```
@@ -44,4 +44,15 @@ SET OpenSSBinPath=%~dp0OpenSSL\OpenSSL-Win64-1_1_0e\bin
 SET CertsPath=%~dp0Certs
 ```
 
-## Note Note di utilizzo dello script 02-MetadataSign-Test.cmd.cmd
+## Note di utilizzo dello script 02-MetadataSign-Test.cmd
+Lo script firma un file di metadata SAML mediante l'utilizzo di XmlSecTool V2 che deve essere presente nella directory *XmlSecTool*  le impostazioni con cui verrà firmato il file riportate nella sezione *"Impostazioni"*.
+Nello script **02-MetadataSign-Test.cmd** le impostazioni sono impostate per la firma di un file metadata SAML denominato *agid-spid-esempio-metadata.xml* presente nella directory *Metadata*, creando il file metadata SAML denominato *agid-spid-esempio-metadata-signed-ComuneVigata-SPID.xml* nella cartella *Metadata*.
+Lo script **02-MetadataSign-Test.cmd** utilizzerà per firmare il file metadata SAML il certificato con il file per la chiave privata non protetto da password denominato *ComuneVigata-SPID-nopass.key* e il file per la chiave pubblica denominato *ComuneVigata-SPID.crt* entrambi presenti nella directory *Certs*.
+
+```
+REM *** Impostazioni ***
+SET MetadataUnsignedFile=agid-spid-esempio-metadata.xml
+SET MetadataSignedFile=agid-spid-esempio-metadata-signed-ComuneVigata-SPID.xml
+SET CertCRTFile=ComuneVigata-SPID.crt
+SET CertKeyFileNoPass=ComuneVigata-SPID-nopass.key
+```
