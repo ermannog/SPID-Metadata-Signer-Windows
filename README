@@ -1,0 +1,1 @@
+Gli scripts permettono di generare un certificato digitale autofirmato tramite [OpenSSL](https://www.openssl.org/) e di permette di firmare un metadata SAML utilizzando [XmlSecTool V2](https://wiki.shibboleth.net/confluence/display/XSTJ2/xmlsectool+V2+Home).
