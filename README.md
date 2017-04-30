@@ -56,3 +56,14 @@ SET MetadataSignedFile=agid-spid-esempio-metadata-signed-ComuneVigata-SPID.xml
 SET CertCRTFile=ComuneVigata-SPID.crt
 SET CertKeyFileNoPass=ComuneVigata-SPID-nopass.key
 ```
+
+Le configurazioni relative al path di XmlSecTool, della directory *Certs* e della directory *Metadata* sono riportate nella sezione *"Configurazioni"*.
+Nello script **02-MetadataSign-Test.cmd** le configurazioni sono impostate per utilizzare XmlSecTool 2.0.0 presente nella directory *XmlSecTool\xmlsectool-2.0.0\lib* 
+
+```
+REM *** Configurazioni ***
+SET MetadataPath=%~dp0Metadata
+SET CertsPath=%~dp0Certs
+SET XmlSecToolPath=%~dp0XmlSecTool\xmlsectool-2.0.0
+SET CLASSPATH=%XmlSecToolPath%\lib\*
+```
