@@ -7,9 +7,10 @@ SET ValidityDays=1095
 SET SHABits=256
 
 REM *** Configurazioni ***
+SET CertsPath=%~dp0Certs
 SET OpenSSBinPath=%~dp0OpenSSL\OpenSSL-Win64-1_1_0e\bin
 SET OPENSSL_CONF=%OpenSSBinPath%\openssl.cfg
-SET CertsPath=%~dp0Certs
+SET HOME=%CertsPath%
 
 CLS
 @ECHO OFF
