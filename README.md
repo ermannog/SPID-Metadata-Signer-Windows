@@ -25,7 +25,7 @@ Questo repository la trasposizione in ambiente Windows del repository [italia/sp
 ## Note di utilizzo dello script 01-CreateSelfSignedCert-Test.cmd
 Lo script crea un certificato autofirmato mediante l'utilizzo di OpenSSL che deve essere presente nella directory *OpenSSl* le impostazioni con cui verrà generato il certificato sono riportate nella sezione *"Impostazioni"*.
 Nello script **01-CreateSelfSignedCert-Test.cmd** le impostazioni sono impostate per la creazione di un certificato autofirmato per il *Comune di Vigata* con chiave di cifratura di 4096 Bits, SHA di 256 Bits, validità di 1095 giorni (3 anni) e prefisso per i file generati pari a *ComuneVigate-SPID*.
-Lo script **01-CreateSelfSignedCert-Test.cmd** genererà nella directory *Certs* un file chiave privata protetta dalla password *P@ssW0rd!* denominato *ComuneVigata-SPID.key*, un file per la chiave privata non protetto da password denominato *ComuneVigata-SPID-nopass.key* e un file per la chiave pubblica denominato *ComuneVigata-SPID.crt*
+Lo script **01-CreateSelfSignedCert-Test.cmd** genererà nella directory *Certs* un file chiave privata protetta dalla password *P@ssW0rd!* denominato *ComuneVigata-SPID.key*, un file per la chiave privata non protetto da password denominato *ComuneVigata-SPID-nopass.key*, un file per la chiave pubblica denominato *ComuneVigata-SPID.crt* e 
 
 ```
 REM *** Impostazioni ***
