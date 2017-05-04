@@ -28,6 +28,9 @@ REM Creazione file chiave privata (.key) protetta da password e chiave pubblica 
 REM Creazione file chiave privata non protetta da password (*-nopass.key)
 %OpenSSBinPath%\openssl rsa -in %CertsPath%\%FileName%.key -out %CertsPath%\%FileName%-nopass.key -passin pass:%Password%
 
+REM Export in formato PKCS12 (PFX)
+%OpenSSBinPath%\openssl pkcs12 -export -in %CertsPath%\%FileName%.crt -inkey %CertsPath%\%FileName%.key -out %CertsPath%\%FileName%.pfx -passin pass:%Password% -passout pass:%Password%
+
 PAUSE
 
 :END
