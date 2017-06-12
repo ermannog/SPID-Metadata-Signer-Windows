@@ -4,7 +4,7 @@ Gli scritps permettono la generazione di un certificato digitale autofirmato e l
 * Lo script **01-CreateSelfSignedCert-Test.cmd** permette di generare un certificato digitale autofirmato tramite [OpenSSL](https://www.openssl.org/)
 * Lo script **02-MetadataSign-Test.cmd** permette di firmare un metadata SAML utilizzando [XmlSecTool V2](https://wiki.shibboleth.net/confluence/display/XSTJ2/xmlsectool+V2+Home)
 
-Questo repository la trasposizione in ambiente Windows del repository [italia/spid-metadata-signer](https://github.com/italia/spid-metadata-signer).
+Questo repository è la trasposizione in ambiente Windows del repository [italia/spid-metadata-signer](https://github.com/italia/spid-metadata-signer).
 
 ## Requisiti per utilizzare lo script 01-CreateSelfSignedCert-Test.cmd
 * [OpenSSL](https://slproweb.com/products/Win32OpenSSL.html) la versione a 64 bit è disponibile nella directory *OpenSSL*
