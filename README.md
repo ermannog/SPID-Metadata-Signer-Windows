@@ -10,7 +10,7 @@ Questo repository è la trasposizione in ambiente Windows del repository [italia
 * [OpenSSL](https://slproweb.com/products/Win32OpenSSL.html) la versione a 64 bit è disponibile nella directory *OpenSSL*
 
 ## Requisiti per utilizzare lo script 02-MetadataSign-Test.cmd
-* [XmlSecTool V2](http://shibboleth.net/downloads/tools/xmlsectool/latest/xmlsectool-2.0.0-bin.zip) disponibile nella directory *XmlSecTool*
+* [XmlSecTool V2](http://shibboleth.net/downloads/tools/xmlsectool/2.0.0/xmlsectool-2.0.0-bin.zip) disponibile nella directory *XmlSecTool*
 * [Java 8](https://www.java.com/it/download/manual.jsp)
 * Metadata compliant alle [Regole Tecniche SPID](http://spid-regole-tecniche.readthedocs.io/en/latest/)
 * Chiave e certificato di firma generati con lo script **01-CreateSelfSignetCert-Test.cmd** (in alternativa è possibile usare anche quello utilizzato per la firma delle asserzioni saml)
